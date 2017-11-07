@@ -8,8 +8,9 @@
 
 int main()
 {
-	Reader<int, std::string, std::string> a("kek.txt");
-	auto tuple = a.getTuple();
-	std::cout << std::get<0>(tuple);
+	Reader<int, std::string, std::string> reader_("Data.txt");
+	auto tuple = reader_.getTuple();
+	const size_t TEST_VALUE = 0; // may: 0 <= TEST_VALUE <= tuple_size - 1
+	std::cout << std::get<TEST_VALUE>(tuple);
 	return 0;
 }
