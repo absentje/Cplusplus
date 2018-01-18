@@ -17,7 +17,6 @@ string_expr < string, string_expr <O1, O2 > >
 operator +(string const & a, string_expr <O1, O2 > const & b);
 
 // +Visitor
-
 struct SizeVisitor {
 	void visit(char const * s) { res_ += strlen(s); }
 	void visit(string const & s) { res_ += s.size(); }
